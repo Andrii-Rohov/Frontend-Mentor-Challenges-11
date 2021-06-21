@@ -1,0 +1,163 @@
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$Story-p: hsla(0, 0%, 100%, 0.70);
+
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+
+body {
+    background-color: $Light-grayish-blue;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+
+#main {
+    margin: 11.5% 11.5% 5%;
+    display: flex;
+    justify-content: center;
+  
+}
+
+#grid-box {
+        display: grid;
+        grid-template-columns: minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px);
+        grid-template-areas: 
+        "Daniel Daniel Jonathan Kira"
+        "Jeanette Patrick Patrick Kira"
+        ;
+        grid-gap: 30px;
+
+    .grid-cell {
+        border-radius: 9px;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 30px 25px 35px;
+        justify-content: space-between;
+        box-shadow: 35px 60px 25px -35px rgba(25, 33, 46, .14);
+        .quote {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0;
+            color: $White;
+        }
+        .story {
+            color: $Story-p;
+            line-height: 1.5;
+        }
+    }
+    .person {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 9px;
+        img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid hsla(0, 0%, 100%, 0.50);;
+        }
+        .name {
+            margin-left: 15px;
+            color: $White;
+        }
+        .graduate {
+            color: hsla(0, 0%, 100%, 0.50);
+            font-size: 11px;
+        }
+    }
+
+    .Kira {
+        grid-area: Kira;
+        background-color: $White;
+        .name {
+            color: $Very-dark-blackish-blue;
+            font-weight: 500;
+        }
+        .graduate {
+            color: hsla(219, 29%, 14%, 0.5);
+        }
+        .quote {
+            color: $Very-dark-grayish-blue ;
+        }
+        .story {
+            color: hsla(219, 29%, 14%, 0.7);
+        }
+
+    }
+    .Jeanette {
+     grid-area: Jeanette;
+     background-color: $White;
+     .name {
+        color: $Very-dark-blackish-blue;
+        font-weight: 500;
+    }
+    .graduate {
+        color: hsla(217, 30%, 14%, 0.5);
+    }
+    .quote {
+        color: $Very-dark-grayish-blue ;
+    }
+    .story {
+        color: hsla(219, 29%, 14%, 0.7);
+    }
+     
+    }
+    .Jonathan {
+        grid-area: Jonathan;
+        background-color: $Very-dark-grayish-blue;
+    }
+    .Patrick {
+     grid-area: Patrick;
+     background-color: $Very-dark-blackish-blue;
+     img {
+         border-color: hsla(263, 55%, 52%, 0.70);
+     }
+    }
+    
+    .Daniel {
+        grid-area: Daniel;
+        background-color: $Moderate-violet;
+        background-image: url(../images/bg-pattern-quotation.svg);
+       background-repeat: no-repeat;
+       background-position: top;
+       background-position-x: 85%;
+       
+           .name{
+           color: hsl(210, 46%, 95%);
+           }
+   
+    }
+
+}
+
+.attribution {
+    color: $Very-dark-blackish-blue;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+   
+    a {
+        text-decoration: none;
+        color: $Moderate-violet;
+        &:hover {
+            color: hsla(263, 86%, 49%, 0.726);
+            
+        }
+    }
+}
+
+/* MOBILE VERSION */
+@media (max-width: 905px) {
+   
+    #grid-box {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+

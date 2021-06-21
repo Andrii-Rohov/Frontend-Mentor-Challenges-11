@@ -1,0 +1,201 @@
+body {
+  background-color: #ecf2f8;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+#main {
+  margin: 11.5% 11.5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#grid-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px);
+      grid-template-columns: minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px) minmax(200px, 320px);
+      grid-template-areas: "Daniel Daniel Jonathan Kira" "Jeanette Patrick Patrick Kira";
+  grid-gap: 30px;
+}
+
+#grid-box .grid-cell {
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 30px 25px 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 35px 60px 25px -35px rgba(25, 33, 46, 0.14);
+          box-shadow: 35px 60px 25px -35px rgba(25, 33, 46, 0.14);
+}
+
+#grid-box .grid-cell .quote {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  color: white;
+}
+
+#grid-box .grid-cell .story {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+}
+
+#grid-box .person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 9px;
+}
+
+#grid-box .person img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+#grid-box .person .name {
+  margin-left: 15px;
+  color: white;
+}
+
+#grid-box .person .graduate {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+}
+
+#grid-box .Kira {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: Kira;
+  background-color: white;
+}
+
+#grid-box .Kira .name {
+  color: #19212e;
+  font-weight: 500;
+}
+
+#grid-box .Kira .graduate {
+  color: rgba(25, 33, 46, 0.5);
+}
+
+#grid-box .Kira .quote {
+  color: #48556a;
+}
+
+#grid-box .Kira .story {
+  color: rgba(25, 33, 46, 0.7);
+}
+
+#grid-box .Jeanette {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Jeanette;
+  background-color: white;
+}
+
+#grid-box .Jeanette .name {
+  color: #19212e;
+  font-weight: 500;
+}
+
+#grid-box .Jeanette .graduate {
+  color: rgba(25, 33, 46, 0.5);
+}
+
+#grid-box .Jeanette .quote {
+  color: #48556a;
+}
+
+#grid-box .Jeanette .story {
+  color: rgba(25, 33, 46, 0.7);
+}
+
+#grid-box .Jonathan {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: Jonathan;
+  background-color: #48556a;
+}
+
+#grid-box .Patrick {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: Patrick;
+  background-color: #19212e;
+}
+
+#grid-box .Patrick img {
+  border-color: rgba(117, 65, 200, 0.7);
+}
+
+#grid-box .Daniel {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Daniel;
+  background-color: #7541c8;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-x: 85%;
+}
+
+#grid-box .Daniel .name {
+  color: #ecf2f8;
+}
+
+.attribution {
+  color: #19212e;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #7541c8;
+}
+
+.attribution a:hover {
+  color: rgba(100, 17, 232, 0.726);
+}
+
+/* MOBILE VERSION */
+@media (max-width: 905px) {
+  #grid-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
